@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" layout:decorator="layouts/main">
+<head>
+<title>SFJ - San Franciscoból Jöttem</title>
+<meta charset="utf-8" />
+</head>
+<body>
+
+	<div layout:fragment="loginContent">
+
+		<form name="login" th:action="@{/login}" method="post" class="form-signin">
+			<h2 class="form-signin-heading">Please sign  in</h2>
+			<div id="err" th:if="${param.error}" class="alert alert-danger">Incorrect username and password</div>
+			<div th:if="${param.logout}" class="alert alert-success">You have successfully signed out</div>
+			<label for="username" class="sr-only">Username</label> 
+			    <input type="text" id="username" name="username" class="form-control" placeholder="Username" required="true" /> 
+			<label for="password" class="sr-only">Password</label> 
+			    <input type="password" id="password" name="password" class="form-control" placeholder="Password" required="true" />
+			<div class="checkbox">
+				<label> <input id="remember-me" name="remember-me" type="checkbox" /> Remember me 
+				</label>
+			</div>
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+		</form>
+		
+		<a href="/registration"> I'd like to sign up </a>
+
+	</div>
+
+</body>
+</html>
