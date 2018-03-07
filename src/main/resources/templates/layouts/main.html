@@ -33,7 +33,7 @@
 				        <li class=""><a href="/bloggers">Bloggers</a></li>
 				    </ul>
 				    <div class="navbar-text navbar-right">
-				    Welcome <span sec:authentication="name"> SFJ </span>
+				    Hi <span sec:authentication="name"> SFJ </span>
 			           <form sec:authorize="isAuthenticated()" id="frmlogout" th:action="@{/logout}" method="post" class="form-inline">
 				    		| <a href="javascript:{}" onclick="document.getElementById('frmlogout').submit(); return false;">Log out</a>
 				      </form>
