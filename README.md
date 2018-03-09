@@ -1,2 +1,2 @@
 # SpringBootSecurity
-(SFJ-San Franciscoból Jöttem)
+(SFJ-San Franciscoból Jöttem Online Java Course)
